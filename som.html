@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryash Jain | Software Development Engineer</title>
+    
+    <!-- Dynamic SVG Favicon for Chrome Tab -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e2b857'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='48' font-weight='bold' fill='%23121211' dominant-baseline='central' text-anchor='middle'>AJ</text></svg>">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Modern Sans & Mono Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Geist', 'sans-serif'],
+                        mono: ['Geist Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0d0d0c;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 50px 50px;
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Radial Gradients for Hover States */
+        .glow-emerald { background: radial-gradient(600px circle at 0% 0%, rgba(16, 185, 129, 0.15), transparent 40%); }
+        .glow-amber { background: radial-gradient(600px circle at 0% 0%, rgba(245, 158, 11, 0.15), transparent 40%); }
+        .glow-orange { background: radial-gradient(600px circle at 0% 0%, rgba(249, 115, 22, 0.15), transparent 40%); }
+        .glow-purple { background: radial-gradient(600px circle at 0% 0%, rgba(168, 85, 247, 0.15), transparent 40%); }
+    </style>
+</head>
+<body class="text-zinc-400 antialiased font-sans min-h-screen selection:bg-emerald-500/30 selection:text-emerald-200">
+
+    <!-- Navbar Layout -->
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-zinc-900 sticky top-0 bg-[#0d0d0c]/90 backdrop-blur-md z-50">
+        <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+            <div class="w-8 h-8 rounded-lg bg-[#e2b857] flex items-center justify-center text-neutral-900 font-bold text-sm shadow-lg shadow-[#e2b857]/20">
+                AJ
+            </div>
+            <span class="text-zinc-200 font-medium tracking-tight text-sm hover:text-white transition-colors">Aryash Jain</span>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-sm text-zinc-400">
+            <a href="#core-work" class="hover:text-zinc-200 hover:-translate-y-0.5 transition-all">Core Work</a>
+            <a href="#skills" class="hover:text-zinc-200 hover:-translate-y-0.5 transition-all">Skills</a>
+            <a href="#contact" class="hover:text-zinc-200 hover:-translate-y-0.5 transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Matrix Section -->
+    <main class="max-w-7xl mx-auto px-6 pt-12 lg:pt-20 pb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_0.95fr] gap-12 items-start">
+            
+            <!-- Left Hero Text -->
+            <div class="flex flex-col lg:max-w-[38rem]">
+                <div class="flex items-center gap-2 text-xs font-mono font-medium tracking-widest text-emerald-500 uppercase mb-6">
+                    <span>Bengaluru</span><span class="text-zinc-700">•</span><span>Software Engineer</span>
+                </div>
+                
+                <h1 class="max-w-2xl text-5xl sm:text-6xl lg:text-7xl font-semibold text-white tracking-tight leading-[0.98] mb-8">
+                    Building platforms that stay reliable as products scale.
+                </h1>
+                
+                <p class="text-zinc-400 text-base sm:text-lg leading-relaxed mb-10 max-w-2xl">
+                    I am a Backend Software Engineer specializing in high-traffic microservices, distributed systems, and API-first platform infrastructure. I turn ambitious designs into systems that sustain 10,000+ QPS and are auditable, secure, and resilient.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap gap-3">
+                    <a href="mailto:aryashjain747@gmail.com" class="bg-[#e2b857] hover:bg-[#d4aa4b] active:scale-95 text-neutral-950 text-sm font-medium px-5 py-2.5 rounded-xl inline-flex items-center gap-2 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        Email Me
+                    </a>
+                    <a href="tel:+916392284940" class="bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 active:scale-95 text-zinc-200 text-sm font-medium px-5 py-2.5 rounded-xl inline-flex items-center gap-2 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                        Call
+                    </a>
+                    <a href="https://www.linkedin.com/in/aryash-jain-19135719b/" target="_blank" class="bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 active:scale-95 text-zinc-200 text-sm font-medium px-5 py-2.5 rounded-xl inline-flex items-center gap-2 transition-all">
+                        <span class="font-mono text-xs text-[#0a66c2] font-bold">in</span> LinkedIn
+                    </a>
+                    <a href="https://github.com/aryashjain" target="_blank" class="bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 active:scale-95 text-zinc-200 text-sm font-medium px-5 py-2.5 rounded-xl inline-flex items-center gap-2 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-400" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.48.01-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.008.069-.008 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://medium.com/@aryash.jain" target="_blank" class="bg-zinc-900 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800 active:scale-95 text-zinc-200 text-sm font-medium px-5 py-2.5 rounded-xl inline-flex items-center gap-2 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-400" fill="currentColor" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75c.66 0 1.19 2.58 1.19 5.75z"/></svg>
+                        Medium
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-6 self-start lg:justify-self-end lg:max-w-[30rem]">
+                <div class="overflow-hidden rounded-[40px] border border-white/10 bg-[#0b0b0b] shadow-[0_40px_120px_rgba(0,0,0,0.28)] w-full">
+                    <div class="overflow-hidden rounded-t-[40px]">
+                        <img src="icons/aryash.png" alt="Aryash Jain" class="w-full h-[200px] sm:h-[220px] object-cover object-center">
+                    </div>
+                    <div class="p-5 space-y-4">
+                        <div class="rounded-[28px] bg-[#111111] border border-zinc-800/70 p-5 shadow-2xl shadow-black/20">
+                            <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+                                <div class="flex h-16 w-16 items-center justify-center rounded-3xl bg-zinc-900/90">
+                                    <img src="icons/supermoney.png" alt="super.money" class="w-12 h-12 object-contain">
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-[10px] uppercase tracking-[0.35em] text-emerald-500 font-semibold mb-2">Current Role</p>
+                                    <p class="text-sm font-semibold text-white leading-tight">Software Engineer at super.money</p>
+                                    <p class="text-xs text-zinc-400 mt-1">(Flipkart)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div class="rounded-[28px] border border-zinc-800/60 bg-[#111111] p-4">
+                                <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500">Earlier At</p>
+                                <p class="mt-4 text-sm font-semibold text-white">Thoughtworks</p>
+                                <p class="text-[11px] text-zinc-400 mt-1">Backend Dev</p>
+                            </div>
+                            <div class="rounded-[28px] border border-zinc-800/60 bg-[#111111] p-4">
+                                <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500">Earlier At</p>
+                                <p class="mt-4 text-sm font-semibold text-white">Tickertape</p>
+                                <p class="text-[11px] text-zinc-400 mt-1">(SmallCase)</p>
+                            </div>
+                        </div>
+
+                        <div class="rounded-[28px] border border-zinc-800/60 bg-[#111111] p-4">
+                            <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-4">Education</p>
+                            <div class="flex items-start gap-3">
+                                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-zinc-900 text-white text-xs font-bold">IET</div>
+                                <div>
+                                    <p class="text-sm font-semibold text-white">Institute of Engineering & Technology, Lucknow</p>
+                                    <p class="text-[11px] text-zinc-400 mt-1">B.Tech — Computer Science & Engineering</p>
+                                    <p class="text-[10px] text-zinc-500 mt-2">2020 - 2024 · CGPA 8.4/10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Interactive Core Work Bento Grid Section -->
+    <section id="core-work" class="border-t border-zinc-900 bg-[#0a0a09]/60 backdrop-blur-sm py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <div class="mb-12 flex items-center gap-4">
+                <p class="font-mono text-xs uppercase tracking-widest text-emerald-500 font-medium whitespace-nowrap">CORE WORK</p>
+                <div class="h-[1px] w-full max-w-[200px] bg-zinc-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Card 1: Platform Engineering (Super.Money) -->
+                <div class="group relative overflow-hidden bg-[#121211] border border-zinc-800/60 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-emerald-900/20 hover:border-emerald-500/30 cursor-pointer active:scale-[0.98]">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none glow-emerald"></div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 transition-colors duration-300 group-hover:bg-emerald-500 group-hover:text-[#121211] shadow-inner border border-emerald-500/20 group-hover:border-emerald-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-100 mb-3 group-hover:text-emerald-50 transition-colors">Platform Infrastructure</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4 group-hover:text-zinc-300 transition-colors">
+                            Re-architected and rebuilt legacy Gateway and Orchestration systems using the Strangler Fig Pattern, enabling a zero-downtime migration.
+                        </p>
+                        <p class="text-zinc-500 text-xs leading-relaxed mb-6 border-t border-zinc-800/40 pt-4 group-hover:border-zinc-700/50 transition-colors">
+                            Engineered platform observability and migrated legacy deployment flows to ArgoCD (GitOps). Improved resource utilization with failsafe mechanisms by 40%.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto relative z-10">
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-emerald-500/20 group-hover:text-zinc-400 transition-colors">Kong API Gateway</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-emerald-500/20 group-hover:text-zinc-400 transition-colors">Kubernetes</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-emerald-500/20 group-hover:text-zinc-400 transition-colors">ArgoCD</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Fintech Engineering (Thoughtworks / Tickertape) -->
+                <div class="group relative overflow-hidden bg-[#121211] border border-zinc-800/60 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-amber-900/20 hover:border-amber-500/30 cursor-pointer active:scale-[0.98]">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none glow-amber"></div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 transition-colors duration-300 group-hover:bg-amber-500 group-hover:text-[#121211] border border-amber-500/20 group-hover:border-amber-500">
+                            <span class="text-lg font-medium">₹</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-100 mb-3 group-hover:text-amber-50 transition-colors">Backend & Integration</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4 group-hover:text-zinc-300 transition-colors">
+                            Optimized partner onboarding flows and streamlined user journeys at Piramal Finance by securely integrating third-party APIs like CAMS.
+                        </p>
+                        <p class="text-zinc-500 text-xs leading-relaxed mb-6 border-t border-zinc-800/40 pt-4 group-hover:border-zinc-700/50 transition-colors">
+                            Made transactional jobs fault-tolerant, added OTP Verification for international lines, and introduced secure coding practices via Google Secret Manager.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto relative z-10">
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-amber-500/20 group-hover:text-zinc-400 transition-colors">Java / Spring Boot</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-amber-500/20 group-hover:text-zinc-400 transition-colors">Golang</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-amber-500/20 group-hover:text-zinc-400 transition-colors">HashiCorp Consul</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Reliability Engineering -->
+                <div class="group relative overflow-hidden bg-[#121211] border border-zinc-800/60 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-orange-900/20 hover:border-orange-500/30 cursor-pointer active:scale-[0.98]">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none glow-orange"></div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400 mb-6 transition-colors duration-300 group-hover:bg-orange-500 group-hover:text-[#121211] border border-orange-500/20 group-hover:border-orange-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-100 mb-3 group-hover:text-orange-50 transition-colors">Reliability Engineering</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4 group-hover:text-zinc-300 transition-colors">
+                            Optimized High-Traffic Services to sustain 10,000+ QPS. Identified and resolved thread contention choke points.
+                        </p>
+                        <p class="text-zinc-500 text-xs leading-relaxed mb-6 border-t border-zinc-800/40 pt-4 group-hover:border-zinc-700/50 transition-colors">
+                            Conducted extensive Non-Functional Requirement (NFR) testing, executed JVM tuning, and aggressively reduced 5XX errors across core legacy microservices via deep root-cause analysis.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto relative z-10">
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-orange-500/20 group-hover:text-zinc-400 transition-colors">JVM Tuning</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-orange-500/20 group-hover:text-zinc-400 transition-colors">Grafana / Prometheus</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-orange-500/20 group-hover:text-zinc-400 transition-colors">NFR Testing</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: AI & Product Development -->
+                <div class="group relative overflow-hidden bg-[#121211] border border-zinc-800/60 rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-purple-900/20 hover:border-purple-500/30 cursor-pointer active:scale-[0.98]">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none glow-purple"></div>
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 transition-colors duration-300 group-hover:bg-purple-500 group-hover:text-[#121211] border border-purple-500/20 group-hover:border-purple-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-100 mb-3 group-hover:text-purple-50 transition-colors">Projects & Applied AI</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4 group-hover:text-zinc-300 transition-colors">
+                            Architected 'The Practise Pitch', a context-aware AI-driven lightweight quizzing platform, and engineered 'DocxFormatter' to automate industrial text segregation.
+                        </p>
+                        <p class="text-zinc-500 text-xs leading-relaxed mb-6 border-t border-zinc-800/40 pt-4 group-hover:border-zinc-700/50 transition-colors">
+                            Built a Chart Dashboard Browser extension to plot huge datasets in real-time. Solved 1000+ DSA problems (Global Rank 1770 ACM-ICPC).
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto relative z-10">
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-purple-500/20 group-hover:text-zinc-400 transition-colors">Python</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-purple-500/20 group-hover:text-zinc-400 transition-colors">React.js / Node.js</span>
+                        <span class="font-mono text-xs text-zinc-500 bg-zinc-900/80 px-2.5 py-1 rounded-full border border-zinc-800/40 group-hover:border-purple-500/20 group-hover:text-zinc-400 transition-colors">Gemini API</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="border-t border-zinc-900 bg-[#0a0a09]/60 backdrop-blur-sm py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <div class="mb-12 flex items-center gap-4">
+                <p class="font-mono text-xs uppercase tracking-widest text-emerald-500 font-medium whitespace-nowrap">EXPERIENCE</p>
+                <div class="h-[1px] w-full max-w-[200px] bg-zinc-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[280px_minmax(0,1fr)] gap-8">
+                <div class="space-y-3">
+                    <button type="button" data-key="supermoney" class="experience-tab w-full rounded-3xl border border-zinc-800/60 bg-[#121211] px-5 py-5 text-left transition-all duration-200 hover:border-emerald-500/30 hover:bg-[#161615] text-zinc-300">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-sm font-semibold text-zinc-100">super.money <span class="text-zinc-500 text-xs">Flipkart</span></p>
+                                <p class="text-xs uppercase tracking-[0.22em] text-zinc-500 mt-3">Software Engineer</p>
+                            </div>
+                            <span class="text-xs text-zinc-500">Apr 2025 – Present</span>
+                        </div>
+                    </button>
+
+                    <button type="button" data-key="thoughtworks" class="experience-tab w-full rounded-3xl border border-zinc-800/60 bg-[#121211] px-5 py-5 text-left transition-all duration-200 hover:border-emerald-500/30 hover:bg-[#161615] text-zinc-300">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-sm font-semibold text-zinc-100">Thoughtworks</p>
+                                <p class="text-xs uppercase tracking-[0.22em] text-zinc-500 mt-3">Backend Developer</p>
+                            </div>
+                            <span class="text-xs text-zinc-500">Aug 2024 – Apr 2025</span>
+                        </div>
+                    </button>
+
+                    <button type="button" data-key="tickertape" class="experience-tab w-full rounded-3xl border border-zinc-800/60 bg-[#121211] px-5 py-5 text-left transition-all duration-200 hover:border-emerald-500/30 hover:bg-[#161615] text-zinc-300">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-sm font-semibold text-zinc-100">Tickertape <span class="text-zinc-500 text-xs">SmallCase</span></p>
+                                <p class="text-xs uppercase tracking-[0.22em] text-zinc-500 mt-3">Backend Intern</p>
+                            </div>
+                            <span class="text-xs text-zinc-500">Jul 2023 – Jan 2024</span>
+                        </div>
+                    </button>
+
+                    <button type="button" data-key="bytelearn" class="experience-tab w-full rounded-3xl border border-zinc-800/60 bg-[#121211] px-5 py-5 text-left transition-all duration-200 hover:border-emerald-500/30 hover:bg-[#161615] text-zinc-300">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="text-sm font-semibold text-zinc-100">ByteLearn Edtech Pvt Ltd</p>
+                                <p class="text-xs uppercase tracking-[0.22em] text-zinc-500 mt-3">SWE Intern</p>
+                            </div>
+                            <span class="text-xs text-zinc-500">Internship</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="experience-panel bg-[#121211] border border-zinc-800/60 rounded-3xl p-8 text-zinc-300 shadow-xl">
+                    <div class="flex flex-col gap-4">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.28em] text-emerald-500 font-medium mb-2" id="exp-role">Software Engineer</p>
+                            <h3 class="text-4xl font-semibold text-zinc-100 leading-tight" id="exp-company">super.money</h3>
+                            <p class="text-sm text-zinc-500" id="exp-dates">April 2025 – Present</p>
+                        </div>
+
+                        <div class="border-t border-zinc-800 pt-6">
+                            <ul class="space-y-4 text-sm text-zinc-300" id="exp-bullets"></ul>
+                        </div>
+
+                        <p class="mt-8 text-sm font-medium text-zinc-400" id="exp-stack"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const experienceData = {
+                supermoney: {
+                    company: 'super.money',
+                    subtitle: 'Flipkart',
+                    title: 'Software Engineer',
+                    dates: 'April 2025 – Present',
+                    bullets: [
+                        'Re-architected and rebuilt a legacy Gateway and Orchestration system using the Strangler Fig Pattern, enabling a zero-downtime migration with failsafe mechanisms that improved resource utilization by 40%.',
+                        'Optimized High-Traffic Services to sustain 10,000+ QPS; identified and resolved thread contention choke points through extensive Non-Functional Requirement (NFR) testing and JVM tuning.',
+                        'Introduced secure coding practices by developing libraries for seamless integration with Google Secret Manager and HashiCorp Consul, standardizing configuration management org-wide.',
+                        'Engineered platform infrastructure by migrating legacy deployment flows to ArgoCD (GitOps), automating CI/CD pipelines and enhancing observability through Grafana and Prometheus.'
+                    ],
+                    stack: 'Java | Spring Boot | Go | Kong API Gateway | Kubernetes | ArgoCD | GCP | Consul | gRPC'
+                },
+                thoughtworks: {
+                    company: 'Thoughtworks',
+                    subtitle: '',
+                    title: 'Backend Developer',
+                    dates: 'August 2024 – April 2025',
+                    bullets: [
+                        'Piramal Finance: Optimized the partner onboarding flow and streamlined multiple user journeys by integrating third-party APIs such as CAMS.',
+                        'Reliability engineering: Reduced 5XX errors across core services by performing root-cause analysis and intense debugging of legacy microservices code flows.',
+                        'Improved service resilience and delivery by standardizing coding practices and deployment controls across the backend platform.'
+                    ],
+                    stack: 'Java | Spring Boot | JavaScript | Node.js | AWS | Grafana | Git | Jira'
+                },
+                tickertape: {
+                    company: 'Tickertape (SmallCase)',
+                    subtitle: '',
+                    title: 'Backend Intern',
+                    dates: 'July 2023 – January 2024',
+                    bullets: [
+                        'Worked with the platform team to power development for various microservices.',
+                        'Made transactional jobs fault tolerant by migrating the legacy file system to the database.',
+                        'Optimized a Golang script for email cleanups, reducing execution time by 91%.',
+                        'Added an OTP verification feature for international numbers through SMS and WhatsApp.'
+                    ],
+                    stack: 'JavaScript | Node.js | Golang | Jira | AWS | Git | Postman'
+                },
+                bytelearn: {
+                    company: 'ByteLearn Edtech Pvt Ltd',
+                    subtitle: '',
+                    title: 'SWE Intern',
+                    dates: 'Internship',
+                    bullets: [
+                        'Worked with the solver team to power the AI-based math solver.',
+                        'Delivered production-ready features for the learning platform while collaborating across small Agile teams.'
+                    ],
+                    stack: 'Python | Jinja | Node.js | Bitbucket | Git'
+                }
+            };
+
+            const tabs = document.querySelectorAll('.experience-tab');
+            const companyEl = document.getElementById('exp-company');
+            const roleEl = document.getElementById('exp-role');
+            const datesEl = document.getElementById('exp-dates');
+            const bulletsEl = document.getElementById('exp-bullets');
+            const stackEl = document.getElementById('exp-stack');
+
+            function renderExperience(key) {
+                const data = experienceData[key];
+                if (!data) return;
+
+                tabs.forEach(tab => {
+                    const isActive = tab.dataset.key === key;
+                    tab.classList.toggle('border-emerald-500/30', isActive);
+                    tab.classList.toggle('bg-[#172017]', isActive);
+                    tab.classList.toggle('text-zinc-100', isActive);
+                });
+
+                companyEl.textContent = data.company;
+                roleEl.textContent = data.title;
+                datesEl.textContent = data.dates;
+                bulletsEl.innerHTML = data.bullets.map(item => `<li class="flex gap-3"><span class="text-emerald-400">→</span><span>${item}</span></li>`).join('');
+                stackEl.textContent = `Tech Stack: ${data.stack}`;
+            }
+
+            tabs.forEach(tab => tab.addEventListener('click', () => renderExperience(tab.dataset.key)));
+            renderExperience('supermoney');
+        </script>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="border-t border-zinc-900 bg-[#0a0a09]/80 py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="mb-12 flex items-center gap-4">
+                <p class="font-mono text-xs uppercase tracking-widest text-emerald-500 font-medium whitespace-nowrap">TECHNICAL SKILLS</p>
+                <div class="h-[1px] w-full max-w-[200px] bg-zinc-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                
+                <!-- Category 1: Languages -->
+                <div>
+                    <h4 class="text-zinc-300 font-medium mb-4 text-sm flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#e2b857]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                        Programming Languages
+                    </h4>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-[#e2b857]/50 hover:text-[#e2b857] hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Java</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-[#e2b857]/50 hover:text-[#e2b857] hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Go</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-[#e2b857]/50 hover:text-[#e2b857] hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Python</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-[#e2b857]/50 hover:text-[#e2b857] hover:-translate-y-0.5 transition-all cursor-default shadow-sm">C++</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-[#e2b857]/50 hover:text-[#e2b857] hover:-translate-y-0.5 transition-all cursor-default shadow-sm">JavaScript</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-[#e2b857]/50 hover:text-[#e2b857] hover:-translate-y-0.5 transition-all cursor-default shadow-sm">TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Category 2: Technologies / Frameworks -->
+                <div>
+                    <h4 class="text-zinc-300 font-medium mb-4 text-sm flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        Technologies & Frameworks
+                    </h4>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-emerald-500/50 hover:text-emerald-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Spring Boot</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-emerald-500/50 hover:text-emerald-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Node.js</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-emerald-500/50 hover:text-emerald-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Kubernetes</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-emerald-500/50 hover:text-emerald-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">GCP / AWS</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-emerald-500/50 hover:text-emerald-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">MongoDB</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-emerald-500/50 hover:text-emerald-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">MySQL</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-emerald-500/50 hover:text-emerald-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Git</span>
+                    </div>
+                </div>
+
+                <!-- Category 3: AI & Tools -->
+                <div>
+                    <h4 class="text-zinc-300 font-medium mb-4 text-sm flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        AI & Developer Tools
+                    </h4>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-purple-500/50 hover:text-purple-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Gemini-API / CLI</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-purple-500/50 hover:text-purple-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Claude-Code</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-purple-500/50 hover:text-purple-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">CursorAI</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-purple-500/50 hover:text-purple-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Postman / Bruno</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-purple-500/50 hover:text-purple-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">GitHub</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-purple-500/50 hover:text-purple-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">IntelliJ / VS-Code</span>
+                    </div>
+                </div>
+
+                <!-- Category 4: Core Coursework -->
+                <div>
+                    <h4 class="text-zinc-300 font-medium mb-4 text-sm flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        Core Coursework
+                    </h4>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-blue-500/50 hover:text-blue-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Data Structures and Algorithms (DSA)</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-blue-500/50 hover:text-blue-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Object-Oriented Design (OOD)</span>
+                        <span class="px-4 py-1.5 rounded-full bg-zinc-900/80 border border-zinc-700/50 text-zinc-300 font-mono text-sm hover:border-blue-500/50 hover:text-blue-400 hover:-translate-y-0.5 transition-all cursor-default shadow-sm">Database Management Systems (DBMS)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="border-t border-zinc-900 py-12 text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto px-6 relative z-10 flex flex-col items-center">
+            <h2 class="text-2xl font-semibold text-zinc-100 mb-6">Let's Connect</h2>
+            <div class="flex flex-wrap justify-center gap-6 mb-8">
+                <a href="mailto:aryashjain747@gmail.com" class="text-zinc-400 hover:text-[#e2b857] transition-colors flex items-center gap-2 font-mono text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L22 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    aryashjain747@gmail.com
+                </a>
+                <a href="tel:+916392284940" class="text-zinc-400 hover:text-emerald-400 transition-colors flex items-center gap-2 font-mono text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    +91-6392284940
+                </a>
+            </div>
+            <p class="text-zinc-600 text-xs font-mono">
+                © 2026 Aryash Jain. Built for high performance.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
